@@ -5,3 +5,10 @@ install:
   - pip install -r requirements.txt
 script:
   - python test.py 
+deploy:
+  provider: heroku
+  api_key:
+    secure: "XO/V4h/oHeT8MtGAXhkMAOHheJBgbn0gFMjASUNoMj2gyUxFRxamubdO5BHFkb/WMTSdjkWIMuXW6x3cZvUZM8p16l9gGkGgaaWFasGKMHX1msLau3fLUzcoUF2a8sUYTHiqa1RFzERWxKJi9ETaw8enfxvDdlmLrRjvueB97epd81Wu18sy//dakOV8uKaVXzz7Btiru0qndSC2v2b1o3g1ghK9mxYc9QVE5B9b4jYCq8wwe9jtwdTPYa3wjZWOKua4WL/l59wxYPy/EsDTaFqY9urK6OKUjuzV/D3CE2MyhQVAH7ZOyYb1B++V1qblIwcRJOF8QInzhHqaKBuC4foCwQ6dCVF7sKINXIPGboNDRetR5it/bOtA4RV212JSyszJLfs6xCpAAOVOLg/kXmIOXGWdrCL19pzXHSUBO+Dv/iLyrsqsiP94GXvpYkKumdyK57hDty7Hi9kKIK/Nmsa5iuROqWyUB9WMdiB9SqOm07rVtmR0DekC9ixr9OzbJRHYbpvBx6Itk+prhng11l/kypaOWSHA8bFezoN5v2dG0IP89fvo6CKZKtsSQ/JcsNgykfTRzMs93OFqARPYdjgdw+qGvRhkugyTS5bGc0/dUmz0c1tyCc26tvowBJqbPzVHRRwY4tcSKyaJ1rqKlV3IhynUH3DjdeahbeEpEkY="
+  app: flask-bioinformatics
+  on:
+    repo: zhangway/flask-bioinformatics
